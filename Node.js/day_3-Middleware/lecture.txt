@@ -1,0 +1,41 @@
+==> Types of node modules
+==>inbuilt ==>http , fs , crpto
+==>custom ==> sum modules
+
+
+==>Types of middleware==> 3
+==>inbuilt server.use(express.json())
+==>custom middleware
+==>external middleware
+
+middleware covering the server both end
+
+
+==>what should be in between client and the school endpoint
+==>middleware(gatekeeper)
+
+==>middleware will be function 
+
+syntax - server.use(middleware_function_name)
+
+server.get("/endpoint",[middleware1,middleware2],(req,res)=>{
+
+})
+
+
+2 ways of using middleware:
+1-> globally serever.use(middleware_name1)   keep this at the top of api of url endpoint
+2->using with endpoint
+server.get("/endpoint",[middleware1,middleware2],(req,res)=>{
+})
+
+
+custom middleware ==> usecase
+activity : log the information of each incoming request in a file calles req.txt
+
+every request --> log it ?
+
+activity 2 :->
+
+I want to check the time taken from my api endpoint to send back the res of req
+

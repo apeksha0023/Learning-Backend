@@ -1,0 +1,31 @@
+nodejs==> V8 engine + some other stuff
+==> node modules ==> node ke modules
+modules==> anything which you export in js is called a module.
+sum module ==> created 
+
+rayn dahl ==> created nodejs ==> already written methods or function for you 
+==> those we call node modules
+
+modules are ==> 3 types
+inbuild modules ==> already written by node.js ==> node.modules
+custom modules ==> sum module
+external module ==> npm install___
+
+
+running node js files ==> node filename
+
+by default nodejs supports "cjs" not "esm"
+
+
+
+node module ==> today
+FS ==> File system ==>  read,write,append,delete,rename 
+                        related to files
+
+
+
+
+ ASCII AND UTF-8
+
+ English language and some symbols ==> ASCII
+ For other language like chinese and english and hindi==> UTF-8

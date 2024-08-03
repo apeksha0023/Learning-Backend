@@ -1,0 +1,34 @@
+Two things 
+1. Pipeline
+2. stages
+
+let x = 12
+fun1 = sum(x)==>return x+5 ==> 17 --> y
+fun2 = sub(y)==> return y-2 ==> 7 -->z
+fun3 = mult(z)==> return z*15 ==>30 -->ans --> our desired output
+
+
+ :- pipeline chaining multiple function and output of the prev function is input of next function and we are getting our desired result
+
+
+ observation is : 
+ how many functions i am using to get output --> 3 (stages in aggregation)
+
+ mongodb agregation : visualising data , filtering , sorting , computing the data sum,sub,mul,div
+
+ aggegation 
+ {
+    "name" : "Apeksha"
+     "age" :  23
+ }
+
+
+ syntax :- 
+ db.CN.aggregate([{filtering},{multiplication},{}])
+ -> pipeline -->   [] 
+ -> stages   -->   {}
+
+NOTE :- All these oprations are going to be read only we are going to manupilate the data but not update the data in database
+ stages :--
+1. $match : it act like find() --> why not to use find() 
+2. $project : 

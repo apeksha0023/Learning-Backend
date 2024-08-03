@@ -1,0 +1,42 @@
+create server
+==> get request from client and i will send back response
+==> client can request anytime ==> i have to continuosly listen to incoming request.
+
+
+
+==> server its a process (system process) , i have to give port number.
+
+
+
+problem : at every change rerunning the server
+==> external module : store (npm)==> nodemon
+==> node mon ==> node monitor ==> it will monitor the changes in the file
+
+imp: "start backend project": npm init --y
+
+Why Express.js??
+==> Express is a backend web application framework for building RESTful APIs with Node.js
+==>  Fast , Unoinonated , Minimalist
+
+
+Twi things in APIs :- 
+==>endpoint like "/cart"
+==>http verb like "GET,POST"
+
+to taste ur APIs 
+==> two tools
+  ==> extension vs code : thunder cleint
+  ==> we use Postman
+
+
+  homework :
+  update
+  delete
+
+  Restful APIs : HTTPS methods and they perform operations on resourses (CRUD)
+                  they sends back the response in the form of JSON
+
+ unopinionated : we can use as we want thats why it is called unopinionated.
+
+
+

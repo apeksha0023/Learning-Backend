@@ -1,0 +1,111 @@
+mongodb://127.0.0.1:27017
+  ==> mongodb --> http --> protocol
+  ==> 127.0.0.1 --> IP adderess
+  ==> 27017 --> PORT no.
+
+  async ==> try catch block
+
+  storing documents in mongodb
+ part 1 ==>structure of document (user collection)==> Schema
+
+  {
+    name: string 
+    email: string
+    age: number
+  }
+
+  part 2 ==> model (mold)==> blueprint for creating in js
+  constructor function ==> {
+    name : string 
+    email : string 
+    age : number
+  }
+
+  ==> constructor function rules
+  --> function name should start with capital letter (PascalCase) ==> userDate
+  --> new keyword (new UserData())==> create object
+
+await new GlassModel({
+
+})
+
+
+
+
+
+ part 3 ==> I can create  as many documents (objects)
+ 
+
+ const GlassModel = mongoos.model({collection_name}--> glass,{defined_schema}-->glassSchema)
+ collection_name =>singular
+ glass==>plural==>glasses
+ user=> users
+
+ MongoDB hierarchy
+ ->Database -->  "mongodb://127.0.0.1:27017/{Database_name}"
+ ->collection -->
+ ->Document
+
+
+ --v ==> version
+ --> freshly created -> v:0
+ --> updated -> v:1
+ --> update  -> v:2
+
+
+Cast to Number failed for value "ten" (type string) at path "size"
+
+validation-->
+
+type casting :
+10 --> "10"
+"ten" --> false
+
+"10" --> 10 then do it
+"ten" --> number then throw error
+
+
+FLOW -->
+Creating a basic Express Application ==> installing the resourses
+                                     ==> creating basic Route
+
+Connection DB ==> Establishing Connection
+              ==> will look at opomized way
+
+Structuring DB ==> Working on Schema and model
+
+CRUD ==> creating new documents
+     ==> reading all the documents
+     ==> updating
+     ==> deleting
+
+
+==> whenever server gets start I should connect to the databases at that point only
+
+==>CRUD
+--> creating a document
+--> reading document
+
+
+==>For update --> filter {id} and what to update -> req.body
+ const updatedGlass = await GlassModel.findByIdAndUpdate({_id:id},req.body)
+
+
+                             // MVC
+            model, view , controllers ==> programming pattern
+             
+             view -> UI --> js and react.js
+
+             controllers --> routes
+
+
+
+
+
+
+
+
+
+
+
+
