@@ -1,0 +1,24 @@
+                                             // Required steps to create a registration sysytem
+
+-> details of user name,age,email,password,gender
+-> we will create userModel
+-> we will create two  route for registration and login
+
+
+userModel---> 
+  ==> Schema
+  ==> Model
+
+  2 routes => registration $ log in
+            registration  :- user give us info and we store it in our database 
+                         -> get details from req.body 
+                          -> save those details in UserModel
+            
+             login :- user gives us info i.e email and password and we check it in our databaes  
+             -> if found then log in successfull
+             -> if not found please register
+
+
+
+
+
