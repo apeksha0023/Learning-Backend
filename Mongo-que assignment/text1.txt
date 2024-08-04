@@ -1,0 +1,99 @@
+1  :- What is a NoSQL Database, and explain the types of NoSQL database?
+Ans:- A NoSQL database (sometimes "not only SQL") is different from a relational database. It stores data in flexible formats instead     of rigid tables. This makes them good for big data and fast-changing data structures.
+There are four main types of NoSQL databases:
+- Document stores: Data is stored as JSON-like documents, good for complex data with varying structures. (e.g. MongoDB)
+- Key-value stores: Simplest type, data is stored as key-value pairs, fast for lookups. (e.g. Redis)
+- Wide-column stores: Data is grouped into column families, good for large datasets with similar data types. (e.g. Cassandra)
+- Graph databases: Stores data as nodes and connections (edges), ideal for relationships between data points. (e.g. Neo4j)
+
+2  :- What is the difference between SQL and NoSQL databases?
+Ans:- Here's a quick breakdown of the key differences between SQL and NoSQL databases:
+    - Structure: SQL is structured (tables with rows and columns), NoSQL is flexible (documents, key-value pairs, graphs).
+    - Schema: SQL has a predefined schema (data definition), NoSQL is schema-less (flexible data).
+    - Scaling: SQL scales vertically (adding resources to one server), NoSQL scales horizontally (adding more servers).
+    - Data Type: SQL excels with structured data, NoSQL handles unstructured and semi-structured data well.
+
+3  :- How to choose between MongoDB and MySQL based on your requirements?
+Ans:- Choosing between MongoDB and MySQL depends on your project's needs. Here's a simplified breakdown:
+     Use MySQL if:
+     -Your data has a well-defined structure and frequent relational queries (joins).
+     -Data integrity and ACID transactions are crucial.
+     -You prefer a mature and widely-supported system.
+     Use MongoDB if:
+     -Your data is unstructured or semi-structured and needs flexibility.
+     -Horizontal scalability and fast inserts/updates are critical.
+     -Development speed and ease of use are priorities.
+
+4  :- What are collections and documents in a MongoDB database?
+Ans:- In MongoDB:
+      - Collections: These act like tables in relational databases. They group related documents together logically. A database can have many collections.
+      - Documents: These are the fundamental unit of data storage in MongoDB. They are like JSON objects with key-value pairs, - - storing information about a particular entity. Collections hold multiple documents.
+
+5  :- What is BSON? What is the difference between BSON and JSON?
+Ans:- Here's a quick comparison of BSON and JSON:
+      - BSON: Stands for Binary JSON. It's a binary-encoded format used internally by MongoDB to store documents. It's more compact and efficient for storage and retrieval than text-based JSON. BSON also supports additional data types like dates and binary data not found in JSON. (Think of it as a compressed and enhanced version of JSON for MongoDB).
+      - JSON: Stands for JavaScript Object Notation. It's a human-readable text-based format for data interchange. It's widely used for  data exchange between applications due to its simplicity. However, JSON can be larger in size and lacks some data types compared to BSON.
+
+6:- What are MongoDB Compass and MongoDB Shell used for?
+Ans:- MongoDB Compass: A free, user-friendly graphical user interface (GUI) for interacting with your MongoDB data. It allows you to:
+       - Visually explore collections and documents
+       - Write queries and filters
+       - Edit and manipulate data
+       - Build aggregation pipelines (for complex data transformations) 
+      MongoDB Shell (mongosh): A JavaScript shell that provides direct command-line access to your MongoDB database. It's useful for:
+       - Scriping automation tasks
+       - Executing complex queries not easily done in Compass
+       - Performing administrative tasks (like creating databases and users)   
+
+7  :- How to create collections in MongoDB?
+Ans:- MongoDB creates collections automatically when you insert the first document with a specific name. However, for specific 
+      configurations (like capped collections or setting a schema), you can use the db.createCollection() method in the MongoDB shell.
+
+8 :-  What is the difference between insertMany and insertOne?
+Ans:- In MongoDB:
+      - insertOne: Inserts a single document into a collection.
+      - insertMany: Inserts an array of multiple documents at once into a collection.
+
+9  :- What is the difference between deleteOne and deleteMany?
+Ans:- - deleteOne: Deletes the first matching document it finds based on your criteria. It only removes one document even if multiple
+      documents match the criteria.
+      - deleteMany: Deletes all documents that match your criteria. It can potentially delete a large number of documents.
+
+10 :- How to read data in MongoDB? What is the difference between find and findOne?
+Ans:- Reading data: Use the find() method with a query filter to specify which documents you want to retrieve. This returns a cursor,
+      which you can iterate through to access the documents.
+      - find vs. findOne:
+        - find(): Returns a cursor that iterates through all matching documents based on your query. Even if no documents match, it returns an empty cursor (never null). Great for retrieving multiple documents or entire collections.
+        - findOne(): Returns only the first matching document based on your query, or null if no documents match. Ideal for fetching a single specific document.
+
+11 :- What is $set in MongoDB?
+Ans:- The $set operator in MongoDB is used to update or create fields within a document. Here's the key idea:
+         - It replaces the value of an existing field with a specified value.
+         - If the field doesn't exist, it creates the field with the specified value.
+
+12 :- How to filter data using MongoDB?
+Ans:- There are two main ways to filter data in MongoDB:
+
+       :- Query Filters:
+          - Embedded within the find method.
+          - Use comparison operators ($eq, $gt, etc.) or logical operators ($and, $or) to specify which documents match your criteria.
+            Example: db.collection.find({name: "Alice"}) finds documents where the "name" field is "Alice".
+       :- Projection Documents:
+          - Used with the find method to specify which fields you want to include or exclude from the returned documents.
+          - Useful for reducing the amount of data transferred and returned.
+            Example: db.collection.find({}, {name: 1, _id: 0}) returns only the "name" field and excludes the "_id" field.
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
+     
